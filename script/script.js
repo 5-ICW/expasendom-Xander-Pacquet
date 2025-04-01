@@ -55,10 +55,10 @@ filterBtn.addEventListener("click", (e) => {
         .includes(filterTxt.value.toLocaleLowerCase())
     );
     console.log(filtered);
-    fillSelect(userName, filtered, "id", "fullname", "email", "password");
+    fillSelect(userName, filtered, "email");
   }
 });
-
+//functie aanmaken
 function fillSelect(element, list, valueOption, inhoud) {
   element.innerHTML = "";
   list.forEach((item) => {
@@ -69,3 +69,8 @@ function fillSelect(element, list, valueOption, inhoud) {
     element.appendChild(newOption);
   });
 }
+
+btnToevoegen.addEventListener("click", () => {
+  addLogin(fullname.value, password.value);
+  console.log(users);
+});
